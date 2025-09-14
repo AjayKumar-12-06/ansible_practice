@@ -1,0 +1,11 @@
+- name: multi playbook
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+    - name: 1st play
+      ansible.builtin.debug:
+        msg: "hello this is play1"
+    - name: 2nd play
+      ansible.builtin.debug:
+        msg: "hello this is play2"
