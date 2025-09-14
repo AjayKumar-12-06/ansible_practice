@@ -1,0 +1,17 @@
+- name: datatypes
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Learn devops"
+    DURATION: 120hrs
+    topics:
+      - ansible
+      - aws
+      - jenkins
+    live: true
+    tools:
+      ci: jenkins
+  tasks:
+    - name: accessing the datatypes
+      ansible.builtin.debug:
+        msg: "the course is {{ COURSE }} and the {{ DURATION }} and the topics are {{ topics }} is it live {{ live }} and tools are {{ tools }}"
