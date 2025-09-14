@@ -1,2 +1,2 @@
-COURSE= "Learning devops with aws"
-DURATION= 120hrs
+COURSE: "Learning devops with aws"
+DURATION: 120hrs
