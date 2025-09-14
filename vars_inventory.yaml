@@ -8,7 +8,6 @@
     
 - name: inventory from web
   hosts: web
-  connection: web
   become: yes
   tasks:
     - name: accessing the vars from group
