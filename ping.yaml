@@ -3,4 +3,4 @@
   become: yes
   tasks:
   -name: pinging the server
-    anisble.builtin.PING:
+    anisble.builtin.ping:
