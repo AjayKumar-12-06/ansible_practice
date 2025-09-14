@@ -6,6 +6,12 @@
     - name: 1st play
       ansible.builtin.debug:
         msg: "hello this is play1"
+
+- name: this is 2nd play
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
     - name: 2nd play
       ansible.builtin.debug:
-        msg: "hello this is play2"
+        msg: "hello this is 2nd play"
