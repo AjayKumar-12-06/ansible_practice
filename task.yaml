@@ -1,0 +1,9 @@
+- name: task level vars
+  hosts: local
+  connection: local
+  tasks:
+    - name: taks level vars
+      vars:
+        COURSE: "ansible with devops"
+      ansible.builtin.debug:
+        msg: "i'm learning the {{ COURSE }}"
