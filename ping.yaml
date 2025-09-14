@@ -1,6 +1,6 @@
--name: checking the server responding or not
-hosts: web
-become: yes
-tasks:
-- name: pinging the server
-  anisble.builtin.PING:
+- name: checking the server responding or not
+  hosts: web
+  become: yes
+  tasks:
+  - name: pinging the server
+    anisble.builtin.PING:
