@@ -1,0 +1,13 @@
+- name: prompt level vars
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: COURSE
+      prompt: Entre the COURSE
+    - name: DURATION
+      prompt: ENter the duration
+      private: false
+  tasks:
+    - name: accessing the prompt vars
+      ansible.builtin.debug:
+        msg: " The course is {{ COURSE }} and the duration is {{ DURATION }}"
