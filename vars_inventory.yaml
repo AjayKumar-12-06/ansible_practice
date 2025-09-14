@@ -1,0 +1,16 @@
+- name: inventory from local
+  hosts: local
+  connection: local
+  tasks:
+    - name: accessing vars from inventory
+      ansible.builtin.debug:
+        msg: "i'm learning {{ COURSE }} and duration is {{ DURATION }}"
+    
+- name: inventory from web
+  hosts: web
+  connection: web
+  become: yes
+  tasks:
+    - name: accessing the vars from group
+      ansible.builtin.debug:
+        msg: "i'm learning {{ COURSE }} and duration is {{ DURATION }}"
