@@ -1,0 +1,7 @@
+- name: hellow world
+  hosts: web
+  become: yes
+  tasks:
+    - name: hello worl programm
+      ansible.builtin.debug:
+        msg: "Hello world"
